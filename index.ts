@@ -32,7 +32,7 @@ client.on('interactionCreate', async (Interaction) => {
     }
     const { commandName, options } = Interaction
 
-    if (commandName === 'Hi daddy') {
+    if (commandName === 'daddy') {
         Interaction.reply({
             content: 'Yes baby',
             ephemeral: true,
@@ -46,7 +46,7 @@ client.on('interactionCreate', async (Interaction) => {
     }
     const { commandName, options } = Interaction
 
-    if (commandName === 'pogi bako?') {
+    if (commandName === 'pogi') {
         Interaction.reply({
             content: 'no',
             ephemeral: true,
