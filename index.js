@@ -35,14 +35,23 @@ const client = new discord_js_1.default.Client({
         discord_js_1.Intents.FLAGS.GUILD_MESSAGES
     ]
 });
+//Start message
 client.on('ready', () => {
+    var _a;
     console.log('The bot is ready');
-});
-client.on('messageCreate', (message) => {
-    if (message.content === 'ping') {
-        message.reply({
-            content: 'pong',
-        });
+    const guildId = '948002880537890856';
+    const guild = client.guilds.cache.get(guildId);
+    let commands;
+    if (guild) {
+        commands = guild.commands;
     }
+    else {
+        commands = (_a = client.application) === null || _a === void 0 ? void 0 : _a.commands;
+    }
+    commands === null || commands === void 0 ? void 0 : commands.create({
+        name: 'ping',
+        description: 'Replies the pong',
+    });
 });
+//Token
 client.login(process.env.TOKEN);
