@@ -1,7 +1,5 @@
 import DiscordJS, { Intents, Interaction } from 'discord.js'
 import dotenv from 'dotenv'
-import WOKCommands from 'wokcommands'
-import path from 'path'
 import mongoose from 'mongoose'
 dotenv.config()
 
@@ -17,12 +15,6 @@ client.on('ready', async () => {
             keepAlive: true,
        })
     console.log('The bot is ready')
-
-    new WOKCommands(client, {
-        commandDir: path.join(__dirname, 'commands'),
-        typeScript: true,
-        testServers: ['948002880537890856'],
-    })
 
 })
 
