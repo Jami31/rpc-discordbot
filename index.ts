@@ -26,7 +26,7 @@ client.on('interactionCreate', async (Interaction) => {
 
     if (commandName === 'daddy') {
         Interaction.reply({
-            content: 'Yes baby',
+            content: 'Yes babby',
             ephemeral: true,
         })
     }
